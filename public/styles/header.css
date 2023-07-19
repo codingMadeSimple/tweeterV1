@@ -1,0 +1,10 @@
+.centerVertHori {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 121.5px;
+  width: 100%;
+  background-color: #d3d3d3;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png")
+}
