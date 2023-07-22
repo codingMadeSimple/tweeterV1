@@ -34,6 +34,7 @@
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   <script type="text/javascript" src="/scripts/client.js"></script>
 
+
   <!-- <meta name="viewport" content ="width-device-width, initial-scale=1.0"> -->
 
 </head>
@@ -64,8 +65,9 @@
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets" method="post">
+      <form action="/tweets" method="POST">
         <label class="bold" for="tweet-text">What are you humming about?</label>
+
         <textarea name="text" id="tweet-text"></textarea>
         <div class="splitHori Bungee topBorder">
           <button class="blueButton" type="submit">Tweet</button>
@@ -79,4 +81,5 @@
     </section>
   </main>
 </body>
+
 </html>

@@ -67,5 +67,23 @@ $(document).ready(function() {
   renderTweets(data)
 });
 
- 
-//id=tweet-text
+
+$(document).ready(function() {
+  $("form").submit(function(event) {
+    const text = $("#tweet-text").serialize()
+    console.log(text)
+event.preventDefault();
+
+
+
+$.ajax({
+  method: 'POST',
+  url: '/tweets',
+  data: $(this).serialize()
+}).then((response) => {
+  console.log('inside the .then', response);
+});
+
+});
+});
+
