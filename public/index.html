@@ -64,6 +64,8 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+      <div hidden id="toLongError">Your tweet is too long.</div>
+      <div hidden id="emptyError">Oops, it looks like you didn't input anything as a tweet</div>
       <h2>Compose Tweet</h2>
       <form action="/tweets" method="POST">
         <label class="bold" for="tweet-text">What are you humming about?</label>

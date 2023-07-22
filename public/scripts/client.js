@@ -18,7 +18,7 @@ const createTweetElement = function(tweetObject) {
       <div>${tweetObject.user.handle}</div>
     </header>
     <div class="tweetPadding bold bottomBorder">
-    ${tweetObject.content.text}
+    <p>${escape(tweetObject.content.text)}</p>
     </div>
     <footer class="sideBySide makeSmaller containerMargin">
       <div class="bold">${timeago.format(tweetObject.created_at)}</div>
@@ -32,6 +32,23 @@ const createTweetElement = function(tweetObject) {
   );
   return $tweet;
 };
+//Anti hacking feature
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+const hideFunc =function(){
+  $(document).ready(function() {
+    $("#emptyError").addClass("hide");
+});
+$(document).ready(function() {
+  $("#toLongError").addClass("hide");
+});
+  
+}
+
 
 $(document).ready(function() {
   //Creates the tweets in the tweet array and then renders the tweets in the tweet container
@@ -60,15 +77,16 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     // const text = $("#tweet-text").serialize();
     const text = document.getElementById("tweet-text").value;
+    
     event.preventDefault();
     if (text.length === 0) {
-      alert("Please input something into the tweet box before hitting the button.");
       event.preventDefault();
+      return $("#emptyError").slideDown()
     } else if (text.length > 140) {
-      alert("Please be under the 140 character limit.");
       event.preventDefault();
+      return $("#toLongError").slideDown()
     } else if (text === null) {
-      alert("Please input something in the tweet box");
+      alert("Please input something")
       event.preventDefault();
     }
     //Ajax post request to post data from the textbox and the submit button
@@ -79,6 +97,7 @@ $(document).ready(function() {
     }).then((response) => {
       console.log('inside the .then', response);
       loadTweets();
+      hideFunc();
     });
 
   });
