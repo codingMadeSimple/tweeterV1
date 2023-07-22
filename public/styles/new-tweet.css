@@ -1,0 +1,21 @@
+.splitHori {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.blueButton{
+  background-color:#4056A1;
+}
+
+.redFont{
+  color: red
+}
+
+/* .splitVert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
