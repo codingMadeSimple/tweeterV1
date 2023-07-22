@@ -5,30 +5,7 @@
  */
 // const tweetObject = require('../../server/data-files/initial-tweets.json');
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+const tweetArray = [];
 
 const createTweetElement = function(tweetObject) {
   const $tweet = $(
@@ -44,7 +21,7 @@ const createTweetElement = function(tweetObject) {
     ${tweetObject.content.text}
     </div>
     <footer class="sideBySide makeSmaller containerMargin">
-      <div class="bold">${tweetObject.created_at}</div>
+      <div class="bold">${timeago.format(tweetObject.created_at)}</div>
       <div class="sideBySide splitUp ">
         <div><i class="fa-solid fa-flag icon"></i></div>
         <div><i class="fa-solid fa-retweet icon"></i></div>
@@ -56,34 +33,54 @@ const createTweetElement = function(tweetObject) {
   return $tweet;
 };
 
-const renderTweets = function(tweetsArray){
-  for(const tweets of tweetsArray){
-    const $tweet = createTweetElement(tweets)
-    $('#tweets-container').append($tweet);
-  }
-}
-
 $(document).ready(function() {
-  renderTweets(data)
-});
+  //Creates the tweets in the tweet array and then renders the tweets in the tweet container
+  const renderTweets = function(tweetArray) {
+    for (const tweets of tweetArray) {
+      const $tweet = createTweetElement(tweets);
+      $('#tweets-container').append($tweet);
+    }
+  };
 
 
-$(document).ready(function() {
+  const loadTweets = function() {
+    $.ajax("/tweets", { method: "GET" })
+      .then(function(data, status) {
+        // console.log(tweetsObject[data])
+        for (const info of data) {
+          tweetArray.push(info);
+        }
+        renderTweets(tweetArray);
+      }
+      );
+  };
+
+  // Event handler on the submit button
+
   $("form").submit(function(event) {
-    const text = $("#tweet-text").serialize()
-    console.log(text)
-event.preventDefault();
+    // const text = $("#tweet-text").serialize();
+    const text = document.getElementById("tweet-text").value;
+    event.preventDefault();
+    if (text.length === 0) {
+      alert("Please input something into the tweet box before hitting the button.");
+      event.preventDefault();
+    } else if (text.length > 140) {
+      alert("Please be under the 140 character limit.");
+      event.preventDefault();
+    } else if (text === null) {
+      alert("Please input something in the tweet box");
+      event.preventDefault();
+    }
+    //Ajax post request to post data from the textbox and the submit button
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: $(this).serialize()
+    }).then((response) => {
+      console.log('inside the .then', response);
+      loadTweets();
+    });
 
-
-
-$.ajax({
-  method: 'POST',
-  url: '/tweets',
-  data: $(this).serialize()
-}).then((response) => {
-  console.log('inside the .then', response);
-});
-
-});
+  });
 });
 
