@@ -3,7 +3,28 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ @media all and (min-width: 1024px) {
 
+  .desktop{
+    display:flex;
+    flex-direction: row;
+  }
+
+  .box-header{   
+    width: 50%;
+    margin: 10%;
+    padding-top: 5%;
+    background-color: rgba(175, 110, 24, 0.747);
+  }
+  
+  .header-padding{
+  margin: 10%;
+  
+  padding-top: 10%;
+}
+
+ }
+/*   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); */
 
 html {
   box-sizing: border-box;
@@ -37,7 +58,7 @@ body {
 .Bungee {
   font-family: "Bungee", "sans-serif";
 }
-
+/* flexColumnCenter */
 .center {
   display: flex;
   flex-direction: column;
@@ -50,57 +71,60 @@ body {
   background-color: #f4f1ec;
 }
 
-.sideBySide{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.sideBySide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.splitUp > div{
+.splitUp>div {
   margin: 0.5rem;
 }
 
-.containerMargin{
+.containerMargin {
   margin: 1rem;
 }
 
-.tweetBorder{
+.tweetBorder {
   border-style: solid;
   margin-bottom: 1rem;
 }
 
 .element:hover {
-	background-color: #FFFFFF;	position: relative;	box-shadow: 35px 30px 5px 0px #a5a5a5;
+  background-color: #FFFFFF;
+  position: relative;
+  box-shadow: 35px 30px 5px 0px #a5a5a5;
 }
 
-.topBorder{
+.topBorder {
   border-top: solid;
 }
 
-.makeSmaller > div{
+.makeSmaller>div {
   font-size: 75%;
 }
 
-.tweetPadding{
+.tweetPadding {
   padding: 2rem;
 }
 
-.bold{
+.bold {
   font-weight: bold;
 }
 
-.bottomBorder{
+.bottomBorder {
   border-bottom: solid;
   margin: 1rem
 }
-.lightUp:hover{
+
+.lightUp:hover {
   background-color: yellow;
 }
 
 .icon:hover {
-  color:yellow
+  color: yellow
 }
 
-.hide{
-  display: none;
-}
+
+
+

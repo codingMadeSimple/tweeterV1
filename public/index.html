@@ -42,31 +42,31 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav class="navbar">
-    <div class="Bungee">
-      <h1>TWEETER</h1>
-    </div>
+      <h1 class="Bungee">TWEETER</h1> 
     <div class="center">
       <div><strong>Write</strong> a new tweet</div>
       <div><i class="fa-solid fa-angles-down"></i></div>
     </div>
   </nav>
 
+  <div class="desktop">
   <header class="centerVertHori">
+    <div class="box-header center">
     <div>
       <img src="/images/profile-hex.png">
     </div>
-    <br>
+
     <div>
       <h2>Your Name</h2>
+    </div>
     </div>
   </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section class="new-tweet">
-      <div hidden id="toLongError">Your tweet is too long.</div>
-      <div hidden id="emptyError">Oops, it looks like you didn't input anything as a tweet</div>
-      <h2>Compose Tweet</h2>
+    <section class="header-padding">
+      <div class="redFont" hidden id="toLongError">Your tweet is too long.</div>
+      <div class="redFont" hidden id="emptyError">Oops, it looks like you didn't input anything as a tweet</div>
       <form action="/tweets" method="POST">
         <label class="bold" for="tweet-text">What are you humming about?</label>
 
@@ -82,6 +82,7 @@
       </article>
     </section>
   </main>
+</div>
 </body>
 
 </html>
