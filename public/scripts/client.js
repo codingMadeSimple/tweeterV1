@@ -10,7 +10,7 @@ $('#document').ready(function(e){
 
   const createTweetElement = function(tweetObject) {
     const $tweet = $(
-      `<article class="tweetBorder">
+      `<article class="tweetBorder element">
       <header class="sideBySide center">
         <div class="sideBySide center splitUp">
           <div><img src="${tweetObject.user.avatars}"></div>
