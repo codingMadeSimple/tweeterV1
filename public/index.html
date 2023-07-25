@@ -35,13 +35,13 @@
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- <meta name="viewport" content ="width-device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content ="width-device-width, initial-scale=1.0">
 
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
-  <nav class="navbar">
+  <nav id="nav-color" class="navbar">
       <h1 class="Bungee">TWEETER</h1> 
     <div class="center">
       <div><strong>Write</strong> a new tweet</div>
@@ -49,8 +49,8 @@
     </div>
   </nav>
 
-  <div class="desktop">
-  <header class="centerVertHori">
+  <div class="desktop header-padding">
+  <header class="container">
     <div class="box-header center">
     <div>
       <img src="/images/profile-hex.png">
@@ -63,22 +63,22 @@
   </header>
 
   <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="header-padding">
+  <main id="big-container" class="container">
+    <section>
       <div class="redFont" hidden id="toLongError">Your tweet is too long.</div>
       <div class="redFont" hidden id="emptyError">Oops, it looks like you didn't input anything as a tweet</div>
       <form action="/tweets" method="POST">
         <label class="bold" for="tweet-text">What are you humming about?</label>
 
         <textarea name="text" id="tweet-text"></textarea>
-        <div class="splitHori Bungee topBorder">
+        <div class="splitHori Bungee">
           <button class="blueButton" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
     <section class="element">
-      <article id="tweets-container" class="tweetBorder">
+      <article id="tweets-container">
       </article>
     </section>
   </main>

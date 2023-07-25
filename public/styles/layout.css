@@ -3,27 +3,15 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- @media all and (min-width: 1024px) {
 
-  .desktop{
-    display:flex;
-    flex-direction: row;
-  }
 
-  .box-header{   
-    width: 50%;
-    margin: 10%;
-    padding-top: 5%;
-    background-color: rgba(175, 110, 24, 0.747);
-  }
-  
-  .header-padding{
-  margin: 10%;
-  
-  padding-top: 10%;
-}
 
- }
+
+
+
+
+
+
 /*   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); */
 
 html {
@@ -45,6 +33,7 @@ title {
 }
 
 body {
+  width:100%;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -65,9 +54,16 @@ body {
   align-items: center;
 }
 
-.container {
+.header-padding{
+  padding-top: 121.5px;
   width: 90%;
-  margin: 0 auto;
+}
+
+.container {
+  display:block;
+  width: 100%;
+  margin: 2.5%;
+  margin-top: 2.5%;
   background-color: #f4f1ec;
 }
 
@@ -75,29 +71,12 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
 }
 
 .splitUp>div {
   margin: 0.5rem;
-}
-
-.containerMargin {
-  margin: 1rem;
-}
-
-.tweetBorder {
-  border-style: solid;
-  margin-bottom: 1rem;
-}
-
-.element:hover {
-  background-color: #FFFFFF;
-  position: relative;
-  box-shadow: 35px 30px 5px 0px #a5a5a5;
-}
-
-.topBorder {
-  border-top: solid;
 }
 
 .makeSmaller>div {
@@ -105,7 +84,7 @@ body {
 }
 
 .tweetPadding {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .bold {
@@ -125,6 +104,65 @@ body {
   color: yellow
 }
 
+/* ADD PADDING TO MAKE IT THEN ENTIRE WIDTH AND HEIGHT */
+@media (max-width: 1230px){
+  #nav-color{
+    background-color: rgba(175, 110, 24, 0.747);
+    padding: 0;
+    margin:0;
+    height:120px;
+    position:fixed;
+    padding: 1.5em;;
+  }
+
+  .box-header{   
+    width: 100%;
+    background-color: rgba(175, 110, 24, 0.747);
+    padding-top: 2.5rem;
+  }
+  .header-padding{
+    width: 100%;
+  }
+  .container{
+    display: block;
+    width: 100%;
+    margin: 0;
+    background-color: #f4f1ec;
+  }
+
+    #big-container{
+    display:block;
+    width: 100%;
+
+    padding:1.5rem;
+    background-color: #f4f1ec;
+  }
+
+  body{
+    min-width: 650px;
+  }
 
 
+ }  
 
+ @media screen and (min-width: 1230px) {
+
+  .desktop{
+    display:flex;
+    flex-direction: row;
+    align-content: space-evenly;
+  }
+
+  .box-header{   
+    width: 60%;
+    padding-top: 5%;
+    background-color: rgba(175, 110, 24, 0.747);
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .header-padding{
+    padding-top: 121.5px;
+    width: 100%;
+  }
+ }

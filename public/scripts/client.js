@@ -10,9 +10,9 @@ $('#document').ready(function(e){
 
   const createTweetElement = function(tweetObject) {
     const $tweet = $(
-      `<article>
-      <header class="sideBySide center containerMargin">
-        <div class="sideBySide center">
+      `<article class="tweetBorder">
+      <header class="sideBySide center">
+        <div class="sideBySide center splitUp">
           <div><img src="${tweetObject.user.avatars}"></div>
           <div>${tweetObject.user.name}</div>
         </div>
@@ -21,9 +21,9 @@ $('#document').ready(function(e){
       <div class="tweetPadding bold bottomBorder">
       <p>${escape(tweetObject.content.text)}</p>
       </div>
-      <footer class="sideBySide makeSmaller containerMargin">
+      <footer class="sideBySide makeSmaller">
         <div class="bold">${timeago.format(tweetObject.created_at)}</div>
-        <div class="sideBySide splitUp ">
+        <div class="sideBySide splitUp">
           <div><i class="fa-solid fa-flag icon"></i></div>
           <div><i class="fa-solid fa-retweet icon"></i></div>
           <div><i class="fa-solid fa-heart icon"></i></div>
