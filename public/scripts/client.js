@@ -3,7 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const tweetObject = require('../../server/data-files/initial-tweets.json');
 
 $('#document').ready(function(e){
   const tweetArray = [];
@@ -57,7 +56,6 @@ $('#document').ready(function(e){
     const loadTweets = function() {
       $.ajax("/tweets", { method: "GET" })
         .then(function(data, status) {
-          // console.log(tweetsObject[data])
           for (const info of data) {
             tweetArray.push(info);
           }
@@ -69,7 +67,6 @@ $('#document').ready(function(e){
     // Event handler on the submit button
 
   $("form").submit(function(event) {
-    // const text = $("#tweet-text").serialize();
     const text = document.getElementById("tweet-text").value;
     
     event.preventDefault();

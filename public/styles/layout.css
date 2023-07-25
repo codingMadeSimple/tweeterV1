@@ -4,16 +4,6 @@
  * Do not modify these two selectors, please
  */
 
-
-
-
-
-
-
-
-
-/*   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); */
-
 html {
   box-sizing: border-box;
 }
@@ -23,10 +13,6 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 title {
   font-family: 'Bungee', sans-serif;
@@ -40,14 +26,10 @@ body {
   font-family: 'Source Sans 3', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
 .Bungee {
   font-family: "Bungee", "sans-serif";
 }
-/* flexColumnCenter */
+
 .center {
   display: flex;
   flex-direction: column;
@@ -104,7 +86,7 @@ body {
   color: yellow
 }
 
-/* ADD PADDING TO MAKE IT THEN ENTIRE WIDTH AND HEIGHT */
+
 @media (max-width: 1230px){
   #nav-color{
     background-color: rgba(175, 110, 24, 0.747);
