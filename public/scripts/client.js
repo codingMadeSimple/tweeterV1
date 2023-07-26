@@ -8,7 +8,7 @@ $('#document').ready(function(e){
   const tweetArray = [];
 
   const createTweetElement = function(tweetObject) {
-    const $tweet = $(
+    let $tweet = $(
       `<article class="tweetBorder element">
       <header class="sideBySide center">
         <div class="sideBySide center splitUp">
@@ -46,16 +46,18 @@ $('#document').ready(function(e){
   }
 
     //Creates the tweets in the tweet array and then renders the tweets in the tweet container
-    const renderTweets = function(tweetArray) {
-      for (const tweets of tweetArray) {
-        const $tweet = createTweetElement(tweets);
-        $('#tweets-container').append($tweet);
+    const renderTweets = function(tweets) {
+      
+      for (const data of tweets) {
+        const $tweet = createTweetElement(data);
+        $('#tweets-container').prepend($tweet);
       }
     };
 
     const loadTweets = function() {
       $.ajax("/tweets", { method: "GET" })
         .then(function(data, status) {
+          // $('#tweets-container').prepend($tweet);
           for (const info of data) {
             tweetArray.push(info);
           }
@@ -63,7 +65,7 @@ $('#document').ready(function(e){
         }
         );
     };
-
+    loadTweets();
     // Event handler on the submit button
 
   $("form").submit(function(event) {
