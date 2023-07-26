@@ -30,3 +30,6 @@
   box-shadow: 35px 30px 5px 0px #a5a5a5;
 }
 
+.tweet-content{
+  word-wrap: break-word;
+}
