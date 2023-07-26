@@ -30,7 +30,7 @@ body {
   font-family: "Bungee", "sans-serif";
 }
 
-.center {
+.center-column {
   display: flex;
   flex-direction: column;
   align-items: center;

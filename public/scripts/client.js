@@ -10,8 +10,8 @@ $('#document').ready(function(e) {
   const createTweetElement = function(tweetObject) {
     let $tweet = $(
       `<article class="tweetBorder shadow">
-      <header class="side-by-side center">
-        <div class="side-by-side center splitUp">
+      <header class="side-by-side center-column">
+        <div class="side-by-side center-column splitUp">
           <div><img src="${tweetObject.user.avatars}"></div>
           <div>${tweetObject.user.name}</div>
         </div>
