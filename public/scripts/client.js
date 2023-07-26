@@ -47,21 +47,24 @@ $('#document').ready(function(e){
 
     //Creates the tweets in the tweet array and then renders the tweets in the tweet container
     const renderTweets = function(tweets) {
-      
+      // Clear tweat-container first
+      $("#tweets-container").empty();
       for (const data of tweets) {
         const $tweet = createTweetElement(data);
         $('#tweets-container').prepend($tweet);
       }
     };
+    // renderTweets();
+
 
     const loadTweets = function() {
       $.ajax("/tweets", { method: "GET" })
         .then(function(data, status) {
           // $('#tweets-container').prepend($tweet);
-          for (const info of data) {
-            tweetArray.push(info);
-          }
-          renderTweets(tweetArray);
+          // for (const info of data) {
+          //   tweetArray.push(info);
+          // }
+          renderTweets(data);
         }
         );
     };
@@ -81,6 +84,9 @@ $('#document').ready(function(e){
     } else if (text === null) {
       alert("Please input something")
       event.preventDefault();
+    } else if(text.trim.length === 0){
+      alert("Please input something other than spaces")
+      event.preventDefault();
     }
     //Ajax post request to post data from the textbox and the submit button
     $.ajax({
@@ -91,6 +97,11 @@ $('#document').ready(function(e){
       console.log('inside the .then', response);
       loadTweets();
       hideFunc();
-    });
+
+
+      //Something is going wrong here
+    }).catch(
+      send
+    );
   });
 }); //Document ready finishes here.
