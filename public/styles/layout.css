@@ -26,7 +26,7 @@ body {
   font-family: 'Source Sans 3', sans-serif;
 }
 
-.Bungee {
+.bungee-font {
   font-family: "Bungee", "sans-serif";
 }
 
@@ -42,14 +42,15 @@ body {
 }
 
 .container {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin: 2.5%;
   margin-top: 2.5%;
   background-color: #f4f1ec;
 }
 
-.sideBySide {
+.side-by-side {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -129,7 +130,6 @@ body {
   body {
     min-width: 650px;
   }
-
 
 }
 

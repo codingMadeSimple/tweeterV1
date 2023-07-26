@@ -12,7 +12,7 @@ $(document).ready(function() {
     counter.text(140 - length);
 
     if(numberCount < 0){
-      $(outputObj[0]).addClass("redFont")
+      $(outputObj[0]).addClass("red-font")
     }
 
   });

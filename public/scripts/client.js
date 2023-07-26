@@ -5,13 +5,13 @@
  */
 
 $('#document').ready(function(e) {
-  const tweetArray = [];
 
+  //Adding new tweet html with interpolated variables
   const createTweetElement = function(tweetObject) {
     let $tweet = $(
-      `<article class="tweetBorder element">
-      <header class="sideBySide center">
-        <div class="sideBySide center splitUp">
+      `<article class="tweetBorder shadow">
+      <header class="side-by-side center">
+        <div class="side-by-side center splitUp">
           <div><img src="${tweetObject.user.avatars}"></div>
           <div>${tweetObject.user.name}</div>
         </div>
@@ -20,9 +20,9 @@ $('#document').ready(function(e) {
       <div class="tweetPadding bold bottomBorder">
       <p class="tweet-content"">${escape(tweetObject.content.text)}</p>
       </div>
-      <footer class="sideBySide makeSmaller">
+      <footer class="side-by-side makeSmaller">
         <div class="bold">${timeago.format(tweetObject.created_at)}</div>
-        <div class="sideBySide splitUp">
+        <div class="side-by-side splitUp">
           <div><i class="fa-solid fa-flag icon"></i></div>
           <div><i class="fa-solid fa-retweet icon"></i></div>
           <div><i class="fa-solid fa-heart icon"></i></div>

@@ -41,7 +41,7 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav id="nav-color" class="navbar">
-      <h1 class="Bungee">TWEETER</h1> 
+      <h1 class="bungee-font">TWEETER</h1> 
     <div class="center">
       <div><strong>Write</strong> a new tweet</div>
       <button><i class="fa-solid fa-angles-down"></i></button>
@@ -64,13 +64,13 @@
   <!-- Page-specific (main) content here -->
   <main id="big-container" class="container">
     <section>
-      <div class="redFont" hidden id="toLongError">Your tweet is too long.</div>
-      <div class="redFont" hidden id="emptyError">Oops, it looks like you didn't input anything as a tweet</div>
+      <div class="red-font" hidden id="toLongError">Your tweet is too long.</div>
+      <div class="red-font" hidden id="emptyError">Oops, it looks like you didn't input anything as a tweet</div>
       <form action="/tweets" method="POST">
         <label class="bold" for="tweet-text"></label>
 
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div class="splitHori Bungee">
+        <div class="split-hori bungee-font">
           <button class="blueButton" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>

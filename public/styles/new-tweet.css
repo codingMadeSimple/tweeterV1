@@ -1,4 +1,4 @@
-.splitHori {
+.split-hori {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,7 +14,7 @@
   padding: 1rem;
 }
 
-.redFont{
+.red-font{
   color: red
 }
 
@@ -24,7 +24,7 @@
   margin-top: 2rem;
 }
 
-.element:hover {
+.shadow:hover {
   background-color: #f4f1ec;
   position: relative;
   box-shadow: 35px 30px 5px 0px #a5a5a5;
