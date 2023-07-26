@@ -4,9 +4,11 @@ A simple single-page AJAX based Twitter clone that uses jQuery, HTML5 and CSS to
 
 ## Final Product
 
-!["A multitude of urls and their shorttened forms."](https://github.com/codingMadeSimple/tinyapp/blob/master/docs/edit-functionality.png)
-!["Showcases the functionality of the edit button."](https://github.com/codingMadeSimple/tinyapp/blob/master/docs/create-urls-page.png)
-!["A view of the create new URL page."](https://github.com/codingMadeSimple/tinyapp/blob/master/docs/my-urls-page.png)
+!["Showcasing the full windowed app with a tweet."](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/tweeter-full-screen.png?raw=true)
+
+!["The app will stay with the larger format up until 1230px width"](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/tweeter-big-style.png?raw=true)
+
+!["Showcases the small version of the app, which changes dynamically."](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/tweeter-small-style.png?raw=true)
 
 ## Dependencies
 
