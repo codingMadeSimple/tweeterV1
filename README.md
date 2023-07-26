@@ -4,9 +4,9 @@ A simple single-page AJAX based Twitter clone that uses jQuery, HTML5 and CSS to
 
 ## Final Product
 
-!["A multitude of urls and their shorttened forms."]
-
-
+!["A multitude of urls and their shorttened forms."](https://github.com/codingMadeSimple/tinyapp/blob/master/docs/edit-functionality.png)
+!["Showcases the functionality of the edit button."](https://github.com/codingMadeSimple/tinyapp/blob/master/docs/create-urls-page.png)
+!["A view of the create new URL page."](https://github.com/codingMadeSimple/tinyapp/blob/master/docs/my-urls-page.png)
 
 ## Dependencies
 
