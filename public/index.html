@@ -41,16 +41,16 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav id="nav-color" class="navbar">
-      <h1 class="bungee-font">TWEETER</h1> 
-    <div class="center-column">
+      <h1 class="logo-and-button-font">TWEETER</h1> 
+    <div class="center-contents">
       <div><strong>Write</strong> a new tweet</div>
       <i class="fa-solid fa-angles-down"></i>
     </div>
   </nav>
 
-  <div class="desktop header-padding">
-  <header class="container">
-    <div class="box-header center-column">
+  <div class="main-width-padding">
+  <header class="main-container">
+    <div class="user-format center-contents">
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -62,15 +62,13 @@
   </header>
 
   <!-- Page-specific (main) content here -->
-  <main id="big-container" class="container">
+  <main id="big-container" class="main-container">
     <section>
       <div class="red-font" hidden id="toLongError">Your tweet is too long.</div>
       <div class="red-font" hidden id="emptyError">Oops, it looks like you didn't input anything as a tweet</div>
       <form action="/tweets" method="POST">
-        <label class="bold" for="tweet-text"></label>
-
         <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-        <div class="split-hori bungee-font">
+        <div class="split-hori logo-and-button-font">
           <button class="blueButton" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>

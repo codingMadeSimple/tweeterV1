@@ -26,31 +26,31 @@ body {
   font-family: 'Source Sans 3', sans-serif;
 }
 
-.bungee-font {
+.logo-and-button-font {
   font-family: "Bungee", "sans-serif";
 }
 
-.center-column {
+.center-contents {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header-padding {
+.main-width-padding {
   margin-top: 120px;
   width: 90%;
 }
 
-.container {
+.main-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 50%;
   margin: 2.5%;
   margin-top: 2.5%;
   background-color: #f4f1ec;
 }
 
-.side-by-side {
+.align-horizonal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -66,17 +66,14 @@ body {
   font-size: 75%;
 }
 
-.tweetPadding {
+.tweets-format {
   padding: 1rem;
+  border-bottom: solid;
+  margin: 1rem
 }
 
 .bold {
   font-weight: bold;
-}
-
-.bottomBorder {
-  border-bottom: solid;
-  margin: 1rem
 }
 
 .lightUp:hover {
@@ -102,23 +99,24 @@ body {
     
   }
 
-  .box-header {
+  .user-format {
     width: 100%;
     background-color: rgba(175, 110, 24, 0.747);
     padding-top: 2.5rem;
   }
 
-  .header-padding {
+  .main-width-padding {
     width: 100%;
   }
 
-  .container {
+  .main-container {
     display: block;
     width: 100%;
     margin: 0;
     background-color: #f4f1ec;
   }
 
+  /* This id will make sure that there will be one static orange block when the page gets smaller and changes format */
   #big-container {
     display: block;
     width: 100%;
@@ -134,17 +132,11 @@ body {
 
 @media screen and (min-width: 1230px) {
 
-  .desktop {
-    display: flex;
-    flex-direction: row;
-    align-content: space-evenly;
-  }
-
-  #big-container{
+  .main-container{
     width: 50%;
   }
-
-  .box-header {
+  
+  .user-format {
     width: 60%;
     padding-top: 5%;
     background-color: rgba(175, 110, 24, 0.747);
@@ -152,8 +144,11 @@ body {
     margin-left: 10%;
   }
 
-  .header-padding {
-    padding-top: 121.5px;
+  .main-width-padding {
+    display: flex;
+    flex-direction: row;
+    align-content: space-evenly;
+    padding-top: 120px;
     width: 100%;
   }
 }

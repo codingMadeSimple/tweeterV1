@@ -9,20 +9,20 @@ $('#document').ready(function(e) {
   //Adding new tweet html with interpolated variables
   const createTweetElement = function(tweetObject) {
     let $tweet = $(
-      `<article class="tweetBorder shadow">
-      <header class="side-by-side center-column">
-        <div class="side-by-side center-column splitUp">
+      `<article class="tweet-border shadow">
+      <header class="align-horizonal center-contents">
+        <div class="align-horizonal center-contents splitUp">
           <div><img src="${tweetObject.user.avatars}"></div>
           <div>${tweetObject.user.name}</div>
         </div>
         <div>${tweetObject.user.handle}</div>
       </header>
-      <div class="tweetPadding bold bottomBorder">
+      <div class="tweets-format bold ">
       <p class="tweet-content"">${escape(tweetObject.content.text)}</p>
       </div>
-      <footer class="side-by-side makeSmaller">
+      <footer class="align-horizonal makeSmaller">
         <div class="bold">${timeago.format(tweetObject.created_at)}</div>
-        <div class="side-by-side splitUp">
+        <div class="align-horizonal splitUp">
           <div><i class="fa-solid fa-flag icon"></i></div>
           <div><i class="fa-solid fa-retweet icon"></i></div>
           <div><i class="fa-solid fa-heart icon"></i></div>
@@ -40,6 +40,7 @@ $('#document').ready(function(e) {
     return div.innerHTML;
   };
 
+  //A function that will hide the errors after they pop up. This is called on keypress and on click of tweet submit button
   const hideErrors = function() {
     $("#emptyError").hide();
     $("#toLongError").hide();
@@ -47,7 +48,7 @@ $('#document').ready(function(e) {
 
   //Creates the tweets in the tweet array and then renders the tweets in the tweet container
   const renderTweets = function(tweets) {
-    // Clear tweat-container first
+    // Clear tweat-container
     $("#tweets-container").empty();
     for (const data of tweets) {
       const $tweet = createTweetElement(data);
@@ -65,24 +66,21 @@ $('#document').ready(function(e) {
         console.log("An error has occured.")
       })
   };
+
   //Loads in stored tweets
   loadTweets();
 
-
-
-  // Event handler on the submit button
-
+  // Event handler on the tweet submit button
   $("form").submit(function(event) {
     const text = $("#tweet-text").val().trim();
     event.preventDefault();
 
-    //Checking user input
+    //Checking user input for edge cases
     if (text.length === 0) {
       return $("#emptyError").slideDown();
     } else if (text.length > 140) {
       return $("#toLongError").slideDown();
     }
-
 
     //Ajax post request to post data from the textbox and the submit button
     $.ajax({
@@ -95,17 +93,15 @@ $('#document').ready(function(e) {
       loadTweets();
       //This will hide the errors if a user fixes the input and submits it
       hideErrors();
-
-
       //need to clear the textarea
-
       $("#tweet-text").val("").trigger("keyup")
-      //Something is going wrong here
+
+      //Handles the bad post request
     }).catch((error) =>{
       console.log("An error has occured.")
     })
 
   });
-}); //Document ready finishes here.
+});
 
 

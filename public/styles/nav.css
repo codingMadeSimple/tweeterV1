@@ -10,9 +10,7 @@
   padding: 1.5em;
   position:fixed;
   top: 0;
-}
-
-
-.navbar .fa-angles-down{
+  /* Colors the angled down arrows red */
+} .fa-angles-down{
   color: red;
 }
