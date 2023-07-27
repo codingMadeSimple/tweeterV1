@@ -37,7 +37,7 @@ body {
 }
 
 .header-padding {
-  padding-top: 121.5px;
+  margin-top: 120px;
   width: 90%;
 }
 
@@ -99,7 +99,7 @@ body {
     height: 120px;
     position: fixed;
     padding: 1.5em;
-    ;
+    
   }
 
   .box-header {
@@ -138,6 +138,10 @@ body {
     display: flex;
     flex-direction: row;
     align-content: space-evenly;
+  }
+
+  #big-container{
+    width: 50%;
   }
 
   .box-header {

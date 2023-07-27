@@ -9,8 +9,10 @@
   background-color: #4056A1;
   padding: 1.5em;
   position:fixed;
+  top: 0;
 }
 
-.red-fill{
-  color:red;
+
+.navbar .fa-angles-down{
+  color: red;
 }

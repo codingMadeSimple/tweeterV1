@@ -40,7 +40,7 @@ $('#document').ready(function(e) {
     return div.innerHTML;
   };
 
-  const hideFunc = function() {
+  const hideErrors = function() {
     $("#emptyError").hide();
     $("#toLongError").hide();
   };
@@ -94,19 +94,18 @@ $('#document').ready(function(e) {
       //Call create tweet function here 
       loadTweets();
       //This will hide the errors if a user fixes the input and submits it
-      hideFunc();
-
+      hideErrors();
 
 
       //need to clear the textarea
 
-
-
-
-      $("#tweet-text").val()="";
+      $("#tweet-text").val("").trigger("keyup")
       //Something is going wrong here
     }).catch((error) =>{
       console.log("An error has occured.")
     })
+
   });
 }); //Document ready finishes here.
+
+
