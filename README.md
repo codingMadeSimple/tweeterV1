@@ -6,16 +6,16 @@ A simple single-page AJAX based Twitter clone that uses jQuery, HTML5 and CSS to
 
 !["Showcasing the full windowed app with a tweet."](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/tweeter-full-screen.png?raw=true)
 
-!["The app will stay with the larger format up until 1230px width"](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/tweeter-big-style.png?raw=true)
+!["The app will stay with the larger format up until 1230px width."](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/tweeter-big-style.png?raw=true)
 
 !["Showcases the small version of the app, which changes dynamically."](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/tweeter-small-style.png?raw=true)
 
 ## Dependencies
 
 - body-parser
-- Chance
-- Node.js
-- Express
+- chance
+- node.js
+- express
 - md5
 - morgan
 

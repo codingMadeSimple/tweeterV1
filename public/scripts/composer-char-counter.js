@@ -1,5 +1,6 @@
 //Keeps track of remaining character count
 
+//Needs either change or 
 $(document).ready(function() {
   $('#tweet-text').keypress(function() {
     const input = $(this);

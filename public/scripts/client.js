@@ -54,7 +54,6 @@ $('#document').ready(function(e) {
       $('#tweets-container').prepend($tweet);
     }
   };
-  // renderTweets();
 
 
   const loadTweets = function() {
@@ -66,22 +65,23 @@ $('#document').ready(function(e) {
         console.log("An error has occured.")
       })
   };
-
+  //Loads in stored tweets
   loadTweets();
+
+
+
   // Event handler on the submit button
 
   $("form").submit(function(event) {
     const text = $("#tweet-text").val().trim();
     event.preventDefault();
 
-    //Should these be in the ajax request
+    //Checking user input
     if (text.length === 0) {
       return $("#emptyError").slideDown();
     } else if (text.length > 140) {
       return $("#toLongError").slideDown();
     }
-
-
 
 
     //Ajax post request to post data from the textbox and the submit button
@@ -90,15 +90,23 @@ $('#document').ready(function(e) {
       url: '/tweets',
       data: $(this).serialize()
     }).then((response) => {
-      console.log('inside the .then', response);
 
       //Call create tweet function here 
       loadTweets();
+      //This will hide the errors if a user fixes the input and submits it
       hideFunc();
 
+
+
+      //need to clear the textarea
+
+
+
+
+      $("#tweet-text").val()="";
       //Something is going wrong here
     }).catch((error) =>{
-      console.log(error)
+      console.log("An error has occured.")
     })
   });
 }); //Document ready finishes here.
