@@ -99,7 +99,7 @@ body {
     
   }
 
-  .user-format {
+  .user-icon-name {
     width: 100%;
     background-color: rgba(175, 110, 24, 0.747);
     padding-top: 2.5rem;
@@ -136,7 +136,7 @@ body {
     width: 50%;
   }
   
-  .user-format {
+  .user-icon-name {
     width: 60%;
     padding-top: 5%;
     background-color: rgba(175, 110, 24, 0.747);
