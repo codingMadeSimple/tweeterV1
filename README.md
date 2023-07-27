@@ -4,9 +4,7 @@ A simple single-page AJAX based Twitter clone that uses jQuery, HTML5 and CSS to
 
 ## Final Product
 
-!["Showcasing the fullscreen app with a tweet."](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/fullscreen.png?raw=true)
-
-!["The app will stay with the larger format up until 1230px width."](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/windowed-large-screen.png?raw=true)
+!["Showcasing the fullscreen app."](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/fullscreen.png?raw=true)
 
 !["Showcases the small version of the app with a submitted tweet, which changes format dynamically."](https://github.com/codingMadeSimple/tweeterV1/blob/master/docs/small-windowed-with-tweet.png?raw=true)
 
